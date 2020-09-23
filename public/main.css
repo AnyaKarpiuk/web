@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Miltonian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cormorant&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Cormorant', serif;
+}
+
+body {
+    background: #f9f8fd;
+    margin: 0;
+}
+
+#content{
+    height:100%;
+    background: #f9f8fd;
+    position: relative;
+    z-index: 2;
+    top: 0;
+}
+
+/* about section */
+#about { 
+    position: relative; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+    to right, 
+    #252E40 0%, 
+    #252E40 100% 
+  );
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+}
+
+/* content titles */
+#aboutTitle, #expTitle, #edTitle {
+    position: relative;
+    left: 10%;
+    font-family: 'Playball', cursive;
+    font-size: 52px;
+    color: #BFB45C;
+    border-bottom: solid 5px #E96252;
+    border-top: solid 5px #E96252;
+    padding-right: 15px;
+    width: 20%;
+}
+
+#expTitle {
+    color: #252E40;
+    padding-left: 15px;
+}
+
+/* lines on a side */
+#aboutTitle::before{
+    content: "";
+    background: #E96252;
+    height: 150px;
+    width: 7px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+#aboutTitle::after{
+    content: "";
+    background: #E96252;
+    height: 700px;
+    width: 7px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+#expTitle::before, #edTitle::before{
+    content: "";
+    background: #E96252;
+    height: 400px;
+    width: 7px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+#expTitle::after{
+    content: "";
+    background: #E96252;
+    height: 1000px;
+    width: 7px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+#edTitle::after{
+    content: "";
+    background: #E96252;
+    height: 800px;
+    width: 7px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+
+#myImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(40%);
+}
+
+#aboutInfo {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f9f8fd;
+    padding: 25px;
+    color: #4F5259;
+    text-align: center;
+    outline: 4px solid #252E40;
+    outline-offset: 15px;
+    font-size: 24px;
+}
+
+/* experience section */
+#experience {
+    position: relative; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f9f8fd;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.expContent {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5%;
+    margin-left: auto;
+    padding: 30px;
+    border-bottom: dotted 1px #E96252;
+    color: #4F5259;
+}
+
+.expContent::before{
+    content: "";
+    background: #E96252;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -12px;
+    top: 20%;
+}
+
+.year {
+    float: left;
+    padding: 10px;
+    margin-right: 20px;
+    height: 100%;
+}
+
+.expDescription {
+    padding-left: 50px;
+    font-size: 18px;
+    margin-left: 190px;
+}
+
+/* education section */
+#education {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+    to right, 
+    #252E40 0%, 
+    #252E40 100% 
+    );
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+#edList{
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f9f8fd;
+    padding: 25px;
+    color: #4F5259;
+    outline: 4px solid #252E40;
+    outline-offset: 15px;
+    font-size: 20px;
+}
