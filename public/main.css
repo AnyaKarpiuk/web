@@ -41,7 +41,7 @@ body {
 }
 
 /* content titles */
-#aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle {
+#aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
     position: relative;
     left: 10%;
     font-family: 'Playball', cursive;
@@ -51,11 +51,17 @@ body {
     border-top: solid 5px #E96252;
     padding-right: 15px;
     width: 20%;
+    padding-left: 15px;
 }
 
-#expTitle, #skillsTitle {
+#expTitle, #skillsTitle, #contactTitle{
     color: #252E40;
-    padding-left: 15px;
+}
+
+#contactTitle{
+    border-bottom: 0px;
+    width: 80%;
+    text-align: center;
 }
 
 /* lines on a side */
@@ -79,7 +85,7 @@ body {
     left: 0;
 }
 
-#expTitle::before, #edTitle::before, #skillsTitle::before, #hobTitle::before{
+#expTitle::before, #edTitle::before, #skillsTitle::before, #hobTitle::before, #proTitle::before, #contactTitle::before{
     content: "";
     background: #E96252;
     height: 400px;
@@ -93,6 +99,10 @@ body {
     height: 1100px;
 }
 
+#proTitle::before{
+    height: 100px;
+}
+
 #expTitle::after{
     content: "";
     background: #E96252;
@@ -103,7 +113,7 @@ body {
     left: 0;
 }
 
-#edTitle::after, #skillsTitle::after, #hobTitle::after{
+#edTitle::after, #skillsTitle::after, #hobTitle::after, #proTitle::after{
     content: "";
     background: #E96252;
     height: 500px;
@@ -113,8 +123,12 @@ body {
     left: 0;
 }
 
+#proTitle::after {
+    height: 1100px;
+}
+
 #hobTitle::after {
-    height: 100px;
+    height: 50px;
 }
 
 #myImg {
@@ -235,26 +249,24 @@ body {
 #skillsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(30px, 80px);
-    width: 40%;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     text-align: center;
     color: #4F5259;
-    font-size: 18px;
 }
 
 #skillsGrid h3{
     grid-column: 1 / 3;
-    font-size: 24px;
+    font-size: 18px;
     border-bottom: solid 4px #E96252;
 }
 
 #skillsGrid p{
     background: #f9f8fd;
     border: solid 2px #BFB45C;
-    border-radius: 20px;
+    border-radius: 16px;
     background: linear-gradient(
     to right, 
     #BFB45C 0%, 
@@ -291,8 +303,7 @@ body {
     width: 100%;
     height: 500px;
     background:  #f9f8fd;
-    margin: 100px 0;
-    padding-top: 50px;
+    padding-top: 40px;
     border-top: solid 7px #E96252;
     border-bottom: solid 7px #E96252;
 }
@@ -336,8 +347,8 @@ body {
     left: 20px;
 }
 
-.imgOne:hover{
-    font-size: 10px;
+.imgOne:hover::after{
+     content: "Travelling";
 }
 
 .imgTwo {
@@ -351,3 +362,144 @@ body {
 .imgFour {
   background-image: url("https://cdn.pixabay.com/photo/2018/05/27/15/26/bird-3433703_960_720.jpg");
 }
+
+/* project's section */
+#projects {
+    position: relative;
+    background: linear-gradient(
+    to right, 
+    #252E40 0%, 
+    #252E40 100% 
+    );
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+#projContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    color: #4F5259;
+    width: 70%;
+    height: 100%;
+    background: #f9f8fd;
+}
+
+.proCard {
+    width: 100%;
+    height: auto;
+    border: solid 3px #E96252;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Rancho', cursive;
+    font-size: 18px;
+}
+
+.proCard p{
+    height: 150px;
+}
+
+.frame {
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.proImg {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 2s;
+}
+
+.proCard:hover .proImg{
+    transform: scale(1.1);
+}
+
+#proButtons {
+    width: 100%;
+    height: 40px;
+    border-top: solid 1px #E96252;
+}
+
+#sample, #code {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #BFB45C;
+    font-size: 26px;
+    display: inline-block;
+    transition: all .35s;
+}
+
+#sample{
+    float: left;
+    border-radius: 0 0 0 10px;
+}
+
+#code{
+    border-radius: 0 0 10px 0;
+}
+
+#sample:hover, #code:hover{
+  background: #BFB45C;
+  color: #4F5259;
+}
+
+/* contact section */
+#contact {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#contactContainer {
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #252E40;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    font-size: 28px;
+}
+
+#contactContainer form {
+    border: dotted 2px #f9f8fd;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Rancho', cursive;
+}
+
+label, input, textarea{
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+label {
+    color: #BFB45C;
+}
+
