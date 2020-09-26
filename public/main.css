@@ -34,14 +34,14 @@ body {
     to right, 
     #252E40 0%, 
     #252E40 100% 
-  );
+    );
     background-size: 50% 100%;
     background-repeat: no-repeat;
     padding-top: 80px;
 }
 
 /* content titles */
-#aboutTitle, #expTitle, #edTitle {
+#aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle {
     position: relative;
     left: 10%;
     font-family: 'Playball', cursive;
@@ -53,7 +53,7 @@ body {
     width: 20%;
 }
 
-#expTitle {
+#expTitle, #skillsTitle {
     color: #252E40;
     padding-left: 15px;
 }
@@ -79,7 +79,7 @@ body {
     left: 0;
 }
 
-#expTitle::before, #edTitle::before{
+#expTitle::before, #edTitle::before, #skillsTitle::before, #hobTitle::before{
     content: "";
     background: #E96252;
     height: 400px;
@@ -87,6 +87,10 @@ body {
     position: absolute;
     bottom: 70px;
     left: 0;
+}
+
+#edTitle::before{
+    height: 1100px;
 }
 
 #expTitle::after{
@@ -99,16 +103,19 @@ body {
     left: 0;
 }
 
-#edTitle::after{
+#edTitle::after, #skillsTitle::after, #hobTitle::after{
     content: "";
     background: #E96252;
-    height: 800px;
+    height: 500px;
     width: 7px;
     position: absolute;
     top: 70px;
     left: 0;
 }
 
+#hobTitle::after {
+    height: 100px;
+}
 
 #myImg {
     margin-left: auto;
@@ -179,7 +186,7 @@ body {
 
 .expDescription {
     padding-left: 50px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 190px;
 }
 
@@ -212,4 +219,135 @@ body {
     outline: 4px solid #252E40;
     outline-offset: 15px;
     font-size: 20px;
+}
+
+/* skills section */
+#skills {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+#skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30px, 80px);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    color: #4F5259;
+    font-size: 18px;
+}
+
+#skillsGrid h3{
+    grid-column: 1 / 3;
+    font-size: 24px;
+    border-bottom: solid 4px #E96252;
+}
+
+#skillsGrid p{
+    background: #f9f8fd;
+    border: solid 2px #BFB45C;
+    border-radius: 20px;
+    background: linear-gradient(
+    to right, 
+    #BFB45C 0%, 
+    #BFB45C 100% 
+    );
+    background-repeat: no-repeat;
+}
+
+#skillsGrid #sr {
+    background-size: 95% 100%;
+}
+
+#skillsGrid #se {
+    background-size: 85% 100%;
+}
+
+#skillsGrid #sg {
+    background-size: 10% 100%;
+}
+
+/* hobbies section */
+#hobbies {
+    background: linear-gradient(
+    to right, 
+    #252E40 0%, 
+    #252E40 100% 
+    );
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+
+#hobContainer {
+    width: 100%;
+    height: 500px;
+    background:  #f9f8fd;
+    margin: 100px 0;
+    padding-top: 50px;
+    border-top: solid 7px #E96252;
+    border-bottom: solid 7px #E96252;
+}
+
+#gallery {
+    width: 100%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#gallery div {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 0.5s ease-out;
+  filter: grayscale(70%);
+}
+
+#gallery div:hover {
+  flex: 6;
+}
+
+.imgOne{
+  background-image: url("/static/me.jpg");
+}
+
+.imgOne::after {
+    content: "1";
+    color: #f9f8fd;
+    position: absolute;
+    font-size: 85px;
+    font-family: 'Rancho', cursive;
+    bottom: 0;
+    left: 20px;
+}
+
+.imgOne:hover{
+    font-size: 10px;
+}
+
+.imgTwo {
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/21/12/29/animal-1845060_960_720.jpg");
+}
+
+.imgThree {
+  background-image: url("https://cdn.pixabay.com/photo/2015/06/19/21/33/seagulls-815304_960_720.jpg");
+}
+
+.imgFour {
+  background-image: url("https://cdn.pixabay.com/photo/2018/05/27/15/26/bird-3433703_960_720.jpg");
 }
