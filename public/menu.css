@@ -1,6 +1,7 @@
 /* menu script */
 @import url('https://fonts.googleapis.com/css2?family=Playball&family=Rancho&display=swap');
 
+/* header */
 header {
   position: sticky;
   top: 0;
@@ -105,5 +106,33 @@ header ul li a{
 @keyframes buttons{
     100%{
         height: 100%;
+    }
+}
+
+/* iPad screen size adjustments */
+@media only screen and (max-width: 1024px) {
+  header ul li a{
+    margin: 5px;
+    font-size: 16px;
+    }
+}
+
+/* phone screen size adjustments */
+@media only screen and (max-width: 764px) {
+  header {
+    height: 60px;
+  }
+
+  #logo {
+    font-size: 25px;
+    margin-left: 40px;
+    height: 45px;
+    width: 45px;
+  }
+
+  header ul li a{
+    padding: 7px 10px;
+    margin: 3px;
+    font-size: 14px;
     }
 }

@@ -40,97 +40,6 @@ body {
     padding-top: 80px;
 }
 
-/* content titles */
-#aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
-    position: relative;
-    left: 10%;
-    font-family: 'Playball', cursive;
-    font-size: 52px;
-    color: #BFB45C;
-    border-bottom: solid 5px #E96252;
-    border-top: solid 5px #E96252;
-    padding-right: 15px;
-    width: 20%;
-    padding-left: 15px;
-}
-
-#expTitle, #skillsTitle, #contactTitle{
-    color: #252E40;
-}
-
-#contactTitle{
-    border-bottom: 0px;
-    width: 80%;
-    text-align: center;
-}
-
-/* lines on a side */
-#aboutTitle::before{
-    content: "";
-    background: #E96252;
-    height: 150px;
-    width: 7px;
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-}
-
-#aboutTitle::after{
-    content: "";
-    background: #E96252;
-    height: 700px;
-    width: 7px;
-    position: absolute;
-    top: 70px;
-    left: 0;
-}
-
-#expTitle::before, #edTitle::before, #skillsTitle::before, #hobTitle::before, #proTitle::before, #contactTitle::before{
-    content: "";
-    background: #E96252;
-    height: 400px;
-    width: 7px;
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-}
-
-#edTitle::before{
-    height: 1100px;
-}
-
-#proTitle::before{
-    height: 100px;
-}
-
-#expTitle::after{
-    content: "";
-    background: #E96252;
-    height: 1000px;
-    width: 7px;
-    position: absolute;
-    top: 70px;
-    left: 0;
-}
-
-#edTitle::after, #skillsTitle::after, #hobTitle::after, #proTitle::after{
-    content: "";
-    background: #E96252;
-    height: 500px;
-    width: 7px;
-    position: absolute;
-    top: 70px;
-    left: 0;
-}
-
-#proTitle::after {
-    height: 1100px;
-}
-
-#hobTitle::after {
-    height: 50px;
-}
-
 #myImg {
     margin-left: auto;
     margin-right: auto;
@@ -246,121 +155,28 @@ body {
     flex-direction: column;
 }
 
-#skillsGrid {
+.skillsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 20%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    text-align: center;
     color: #4F5259;
+    font-size: 20px;
 }
 
-#skillsGrid h3{
+.skillsGrid h2{
     grid-column: 1 / 3;
-    font-size: 18px;
-    border-bottom: solid 4px #E96252;
-}
-
-#skillsGrid p{
-    background: #f9f8fd;
-    border: solid 2px #BFB45C;
-    border-radius: 16px;
-    background: linear-gradient(
-    to right, 
-    #BFB45C 0%, 
-    #BFB45C 100% 
-    );
-    background-repeat: no-repeat;
-}
-
-#skillsGrid #sr {
-    background-size: 95% 100%;
-}
-
-#skillsGrid #se {
-    background-size: 85% 100%;
-}
-
-#skillsGrid #sg {
-    background-size: 10% 100%;
-}
-
-/* hobbies section */
-#hobbies {
-    background: linear-gradient(
-    to right, 
-    #252E40 0%, 
-    #252E40 100% 
-    );
-    background-size: 50% 100%;
-    background-repeat: no-repeat;
-    padding-top: 30px;
-}
-
-#hobContainer {
-    width: 100%;
-    height: 500px;
-    background:  #f9f8fd;
-    padding-top: 40px;
-    border-top: solid 7px #E96252;
-    border-bottom: solid 7px #E96252;
-}
-
-#gallery {
-    width: 100%;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-#gallery div {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: all 0.5s ease-out;
-  filter: grayscale(70%);
-}
-
-#gallery div:hover {
-  flex: 6;
-}
-
-.imgOne{
-  background-image: url("/static/me.jpg");
-}
-
-.imgOne::after {
-    content: "1";
-    color: #f9f8fd;
-    position: absolute;
-    font-size: 85px;
+    border-bottom: dotted 1px #E96252;
     font-family: 'Rancho', cursive;
-    bottom: 0;
-    left: 20px;
+    text-align: center;
 }
 
-.imgOne:hover::after{
-     content: "Travelling";
-}
-
-.imgTwo {
-  background-image: url("https://cdn.pixabay.com/photo/2016/11/21/12/29/animal-1845060_960_720.jpg");
-}
-
-.imgThree {
-  background-image: url("https://cdn.pixabay.com/photo/2015/06/19/21/33/seagulls-815304_960_720.jpg");
-}
-
-.imgFour {
-  background-image: url("https://cdn.pixabay.com/photo/2018/05/27/15/26/bird-3433703_960_720.jpg");
+.skillsGrid p{
+    border-radius: 22px;
+    height: 10px;
+    text-align: center;
 }
 
 /* project's section */
@@ -384,7 +200,7 @@ body {
 
 #projContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -400,30 +216,36 @@ body {
     width: 100%;
     height: auto;
     border: solid 3px #E96252;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     font-family: 'Rancho', cursive;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .proCard p{
-    height: 150px;
+    height: auto;
+    padding: 20px 0;
+    border-top: solid 1px #E96252;
+    font-family: 'Cormorant', serif;
 }
 
 .frame {
     overflow: hidden;
     transform: scale(1);
+    border-radius: 10px;
 }
 
 .proImg {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     transition: all 2s;
+    filter: grayscale(80%);
 }
 
 .proCard:hover .proImg{
     transform: scale(1.1);
+    filter: grayscale(0%);
 }
 
 #proButtons {
@@ -457,49 +279,45 @@ body {
   color: #4F5259;
 }
 
-/* contact section */
-#contact {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    padding-top: 50px;
-}
-
-#contactContainer {
-    width: 90%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+mark {
+    color: #f9f8fd;
     background: #252E40;
-    display: flex;
-    justify-content: center;
-    padding: 25px;
-    font-size: 28px;
+    border-radius: 5px;
 }
 
-#contactContainer form {
-    border: dotted 2px #f9f8fd;
-    border-radius: 20px;
-    padding: 20px;
-    font-family: 'Rancho', cursive;
-}
-
-label, input, textarea{
+/* footer */
+footer{
+    height: 80px;
     width: 100%;
+    background: #252E40;
+    border-top: solid 4px #E96252;
+    color: #f9f8fd;
+    font-family: 'Cormorant', serif;
+}
+
+footer p {
+    width: auto;
+    font-size: 20px;
+    float: left;
+    margin-left: 20px;
+    opacity: 0.8;
+}
+
+#socialMedia {
+    width: auto;
+    height: 100%;
+    float: right;
+    position: relative;
+    margin-right: 10px;
+}
+
+#socialMedia img {
+    width: 50px;
     height: 50px;
-    font-size: 28px;
-    border-radius: 20px;
-    margin: 10px;
+    margin: 10px 15px;
+    filter: grayscale(90%);
 }
 
-textarea {
-    height: 100px;
+#socialMedia img:hover{
+    filter: grayscale(10%);
 }
-
-label {
-    color: #BFB45C;
-}
-

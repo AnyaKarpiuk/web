@@ -3,9 +3,13 @@
 
 <head>
 	<title>Anna Karpiuk</title>
+	<!-- link to all css scripts -->
 	<link rel="stylesheet" href="/static/main.css">
 	<link rel="stylesheet" href="/static/menu.css">
 	<link rel="stylesheet" href="/static/front.css">
+	<link rel="stylesheet" href="/static/gallery.css">
+	<link rel="stylesheet" href="/static/lines.css">
+	<link rel="stylesheet" href="/static/contact.css">
 </head>
 
 <body>
@@ -67,16 +71,17 @@
 			<li><a href="#"><span>Home</span></a></li>
 			<li><a href="#about"><span>About Me</span></a></li>
 			<li><a href="#projects"><span>My Little Projects</span></a></li>
-			<li><a href="#"><span>Get in Touch</span></a></li>
+			<li><a href="#contact"><span>Get in Touch</span></a></li>
 		</ul>
 	</header>
 
 	<!-- main content -->
 	<div id="content">
+		<!-- about me section -->
 		<section id="about">
 			<h1 id="aboutTitle">About me</h1>
 			<div id="aboutInfo">
-				<img id="myImg" src="/static/me.jpg" alt="">
+				<img id="myImg" src="/static/images/me.jpg" alt="">
 				<p>Hello! I am a hard-working junior programmer with a good knowledge of front-end techniques. I
 					finished third year of Science in Computing
 					Bilingual customer service professional
@@ -91,6 +96,7 @@
 			</div>
 		</section>
 
+		<!-- experience section -->
 		<section id="experience">
 			<h1 id="expTitle">Experience</h1>
 			<div class="expContent expOne">
@@ -154,19 +160,20 @@
 			</div>
 		</section>
 
+		<!-- education section -->
 		<section id="education">
 			<h1 id="edTitle">Education</h1>
 			<div id="edList">
 				<h3>Education</h3>
 				<ul>
-					<li>(NFQ Level 7) Jan 2018 – present / Dorset college / Science in Computing and
+					<li>(NFQ Level 7) Jan 2018 – May 2020 / Dorset college / Science in Computing and
 						Multimedia</li>
-					<li>(NFQ Level 8) Sep 2011 – May 2016 / Rivne State University of the Humanities /
+					<li>Sep 2011 – May 2016 / Rivne State University of the Humanities /
 						Teacher of Primary School, Teacher of Foreign Language (English) at Primary School </li>
 				</ul>
 				<h3>Further Education & Certification</h3>
 				<ul>
-					<li>Responsive Web Design / in progress / FreeCodeCamp</li>
+					<li>Responsive Web Design / in process / FreeCodeCamp</li>
 					<li>English language course / April 2017 – Dec 2018 / The English Studio / Level:C1</li>
 					<li>English language course / Sep 2016 – March 2017 / Dublin Culture Institute / Level: C1</li>
 					<li>English language course / Jan 2016 – Aug 2016 / Dublin School of English / Level: B2</li>
@@ -174,22 +181,40 @@
 			</div>
 		</section>
 
+		<!-- skills section -->
 		<section id="skills">
 			<h1 id="skillsTitle">Skills</h1>
-			<div id="skillsGrid">
-				<h3>Languages</h3>
-				<h4>Ukrainian</h4>
-				<p id="su"></p>
-				<h4>Russian</h4>
-				<p id="sr"></p>
-				<h4>English</h4>
-				<p id="se"></p>
-				<h4>German</h4>
-				<p id="sg"></p>
-				<h3>Programming</h3>
+			<div class="skillsGrid programming">
+                <h2>Programming</h2>
+				<p>HTMP</p>
+                <p>★★★★★</p>
+                <p>CSS</p>
+                <p>★★★★★</p>
+                <p>JavaScript</p>
+                <p>★★★☆☆</p>
+                <p>Java</p>
+                <p>★★★☆☆</p>
+                <p>Bulma</p>
+                <p>★★★★☆</p>
+                <p>Node.js</p>
+                <p>★★☆☆☆</p>
+                <p>Unity</p>
+                <p>★★★☆☆</p>
+			</div>
+            <div class="skillsGrid languages">
+                <h2>Languages</h2>
+				<p>Ukrainian</p>
+                <p>★★★★★</p>
+                <p>Russian</p>
+                <p>★★★★★</p>
+                <p>English</p>
+                <p>★★★★☆</p>
+                <p>German</p>
+                <p>★☆☆☆☆</p>
 			</div>
 		</section>
 
+		<!-- gallery section -->
 		<section id="hobbies">
 			<h1 id="hobTitle">My hobbies</h1>
 			<div id="hobContainer">
@@ -198,76 +223,110 @@
 					<div class="imgTwo"></div>
 					<div class="imgThree"></div>
 					<div class="imgFour"></div>
+					<div class="imgFive"></div>
+					<div class="imgSix"></div>
+					<div class="imgSeven"></div>
 				</div>
 			</div>
 		</section>
 
+		<!-- mt projects section -->
 		<section id="projects">
 			<h1 id="proTitle">My Little Projects</h1>
 			<div id="projContainer">
 				<div class="proCard">
 					<div class="frame">
-						<img class="proImg" src="/static/me.jpg" alt="">
+						<img class="proImg" src="/static/images/1.PNG" alt="">
                     </div>
-						<p>This is decription for a project. Test Test. sdfhhhhhdjfd skjfjdjsdhl sdkghldsg lsgdskl
-							gslkghsl</p>
+						<h3>MERN Web Application</h3>
+						<p>Web Application build with <mark>HTML</mark>, CSS, React, Node.js, Bulma, Express, MondoDB,
+							Webpack. Hosted on Heroku</p>
 						<div id="proButtons">
-							<a id="sample" href="#"><span>Sample</span></a>
-							<a id="code" href="#"><span>Code</span></a>
+							<a id="sample" href="https://murmuring-taiga-66641.herokuapp.com/"><span>Sample</span></a>
+							<a id="code" href="https://github.com/AnyaKarpiuk/UkMERN"><span>Code</span></a>
 						</div>
 					</div>
 					<div class="proCard">
 						<div class="frame">
-							<img class="proImg" src="/static/me.jpg" alt="">
-                    </div>
-							<p>This is decription for a projectdfgdfbgfdgfd</p>
+							<img class="proImg" src="/static/images/2.PNG" alt="">
+                        </div>
+							<h3>2D Unity Game</h3>
+							<p>Unity 2D game built with C#. Tic Tac Toe with few extra rules.</p>
 							<div id="proButtons">
-								<a id="sample" href="#"><span>Sample</span></a>
-								<a id="code" href="#"><span>Code</span></a>
+								<a id="sample"
+									href="https://simmer.io/@AnyaKarpiuk/tic-tac-toe-extended"><span>Play</span></a>
+								<a id="code"
+									href="https://github.com/AnyaKarpiuk/TicTacToeExtended.git"><span>Code</span></a>
 							</div>
 						</div>
 						<div class="proCard">
 							<div class="frame">
-								<img class="proImg" src="/static/me.jpg" alt="">
-                    </div>
-								<p>This is decription for a projectdsgsdgdsgsgdg</p>
+								<img class="proImg" src="/static/images/3.PNG" alt="">
+                            </div>
+								<h3>3D Unity Game</h3>
+								<p>Unity 3D game built with C# and Blender.</p>
 								<div id="proButtons">
-									<a id="sample" href="#"><span>Sample</span></a>
-									<a id="code" href="#"><span>Code</span></a>
+									<a id="sample"
+										href="https://simmer.io/@AnyaKarpiuk/summer-panic"><span>Play</span></a>
+									<a id="code" href="https://github.com/AnyaKarpiuk/3DGame.git"><span>Code</span></a>
 								</div>
 							</div>
 							<div class="proCard">
 								<div class="frame">
-									<img class="proImg" src="/static/me.jpg" alt="">
-                    </div>
-									<p>This is decription for a projectdsgsdgdsgsgdg</p>
+									<img class="proImg" src="/static/images/4.PNG" alt="">
+                                </div>
+									<h3>Tribute Page</h3>
+									<p>Tribute page for Robin Williams built with pure HTML and CSS.</p>
 									<div id="proButtons">
-										<a id="sample" href="#"><span>Sample</span></a>
-										<a id="code" href="#"><span>Code</span></a>
+										<a id="sample"
+											href="https://floating-beyond-15237.herokuapp.com/"><span>Sample</span></a>
+										<a id="code"
+											href="https://github.com/AnyaKarpiuk/tribute-page-html-css.git"><span>Code</span></a>
 									</div>
 								</div>
-							</div>
+								<div class="proCard">
+									<div class="frame">
+										<img class="proImg" src="/static/images/5.PNG" alt="">
+                                </div>
+										<h3>Adobe Flash CS4</h3>
+										<p></p>
+										<div id="proButtons">
+											<a id="sample"
+												href="https://www.youtube.com/watch?v=NMi49yuSA8I"><span>Sample</span></a>
+										</div>
+									</div>
+								</div>
 		</section>
 
+		<!-- contact form -->
 		<section id="contact">
 			<h1 id="contactTitle">Contact me</h1>
 			<div id="contactContainer">
 				<form method="post" action="mailto:anna-19.1994@mail.ru" enctype="text/plain">
-					<label for="fname">First Name</label><br>
-					<input type="text" id="fname" name="firstname" placeholder="Your name"><br>
+					<label for="name">Name</label><br>
+					<input type="text" id="name" name="name" placeholder="Your name"><br>
 
-					<label for="lname">Last Name</label><br>
-					<input type="text" id="lname" name="lastname" placeholder="Your last name"><br>
-
-                    <label for="email">Email</label><br>
+					<label for="email">Email</label><br>
 					<input type="text" id="email" name="email" placeholder="Your email"><br>
 
-                    <label for="message">Message</label><br>
+					<label for="message">Message</label><br>
 					<textarea id="message" name="message" placeholder="Your message"></textarea><br>
 					<button type="submit">Send</button>
 				</form>
 			</div>
 		</section>
+
+		<!-- footer -->
+		<footer>
+			<p>© Anna Karpiuk 2020. All rights reserved</p>
+			<!-- social media icons -->
+			<div id="socialMedia">
+				<img src="/static/images/linkedin.png" alt="">
+				<img src="/static/images/instagram.png" alt="">
+				<img src="/static/images/github.png" alt="">
+				<img src="/static/images/facebook.png" alt="">
+            </div>
+		</footer>
 
 	</div>
 
