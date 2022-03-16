@@ -79,7 +79,7 @@
     
 }
 
-#scrollDown a {
+a {
     text-decoration: none;
     color: #F8FDFF;
 }
@@ -90,7 +90,7 @@
     animation-fill-mode: forwards;
 }
 
-#scrollDown:hover a {
+a:hover {
     color:#E96252;
 }
 
